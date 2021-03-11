@@ -16,6 +16,9 @@ nmap <Char-0x3E> <C-w><Char-0x3E>
 " for escaping easier with `
 imap <Char-0x60> <Esc>
 
+" for opening new line easier
+nmap <C-o> <i><CR>
+
 " specific tabs for Haskell
 function! SetHaskellPrefs()
   set tabstop=2
@@ -24,6 +27,13 @@ function! SetHaskellPrefs()
 endfunction
 
 autocmd FileType haskell call SetHaskellPrefs()
+
+" using actual tabs in Makefile
+function! SetMakefilePrefs()
+    setlocal noexpandtab
+endfunction
+
+autocmd FileType make call SetMakefilePrefs() 
 
 call plug#begin()
 
