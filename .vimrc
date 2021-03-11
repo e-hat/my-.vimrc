@@ -9,6 +9,10 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 
+" for changing width of split
+nmap <lt> <C-w><lt>
+nmap <Char-0x3E> <C-w><Char-0x3E>
+
 " specific tabs for Haskell
 function! SetHaskellPrefs()
   set tabstop=2
