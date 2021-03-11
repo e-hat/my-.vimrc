@@ -1,4 +1,5 @@
 # Instructions for future me
+This is for vim8.
 * Remember to install `vim-plug`. You can get that [here](https://github.com/junegunn/vim-plug). 
 * Then run `:PlugInstall`.
 * Run `:CocConfig` and copypaste the file in this repo there and run `:CocInstall` or something like that.
