@@ -13,6 +13,9 @@ set shiftwidth=4
 nmap <lt> <C-w><lt>
 nmap <Char-0x3E> <C-w><Char-0x3E>
 
+" for escaping easier with `
+imap <Char-0x60> <Esc>
+
 " specific tabs for Haskell
 function! SetHaskellPrefs()
   set tabstop=2
