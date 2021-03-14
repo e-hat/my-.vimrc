@@ -8,16 +8,17 @@ set encoding=utf-8
 set tabstop=4
 set expandtab
 set shiftwidth=4
+set autoindent
 
 " for changing width of split
 nmap <lt> <C-w><lt>
 nmap <Char-0x3E> <C-w><Char-0x3E>
 
-" for escaping easier with `
-imap <Char-0x60> <Esc>
-
 " for opening new line easier
 nmap <C-o> <i><CR>
+
+" color 80th column @comp40
+set colorcolumn=80
 
 " specific tabs for Haskell
 function! SetHaskellPrefs()
@@ -35,11 +36,16 @@ endfunction
 
 autocmd FileType make call SetMakefilePrefs() 
 
+colorscheme molokai
+
 call plug#begin()
 
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovimhaskell/haskell-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
 
 call plug#end()
 
@@ -48,8 +54,8 @@ filetype plugin indent on
 
 set belloff=all
 
-autocmd vimenter * ++nested colorscheme gruvbox 
-set background=dark
+"autocmd vimenter * ++nested colorscheme gruvbox 
+"set background=dark
 
 set encoding=utf-8
 
