@@ -1,4 +1,5 @@
 # My `.vimrc`
+## About
 This also includes some other stuff. Just some steps for me to follow when I eventually forget all of this setup I've done. 
 ## Instructions for future me
 * This is for vim8.
