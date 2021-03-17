@@ -1,6 +1,6 @@
-# My `.vimrc`
+# dotfiles
 ## About
-This also includes some other stuff. Just some steps for me to follow when I eventually forget all of this setup I've done. 
+This is some stuff to keep track of my tools' configs and some steps for me to follow when I eventually forget all of this setup I've done. 
 ## Instructions for future me
 * This is for vim8.
 * Remember to install `vim-plug`. You can get that [here](https://github.com/junegunn/vim-plug). 
