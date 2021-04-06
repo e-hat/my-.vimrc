@@ -10,8 +10,19 @@ set expandtab
 set shiftwidth=4
 set autoindent
 
+" LEADER KEY
+let mapleader = "," " map leader to comma
+set showcmd
+
+set hlsearch
+
+map <leader>h :noh<CR>
+map <leader>rt :REPLToggle<CR>
+set pastetoggle=<leader>p
+
 " for changing width of split
 nmap <lt> <C-w><lt>
+" needed weird char code for gt
 nmap <Char-0x3E> <C-w><Char-0x3E>
 
 " for opening new line easier
