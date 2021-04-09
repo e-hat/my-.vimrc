@@ -16,8 +16,8 @@ set showcmd
 
 set hlsearch
 
-map <leader>h :noh<CR>
-map <leader>rt :REPLToggle<CR>
+nmap <leader>h :noh<CR>
+nmap <leader>rt :REPLToggle<CR>
 set pastetoggle=<leader>p
 
 " for changing width of split

@@ -107,4 +107,5 @@ alias goto=". goto"
 alias cnct="ssh ehatfi01@homework.cs.tufts.edu"
 alias cpdf="cp ~/.zshrc ~/dev/dotfiles; cp ~/.vimrc ~/dev/dotfiles; cp ~/.vim/coc-settings.json ~/dev/dotfiles; cp ~/.local/bin/goto ~/dev/dotfiles"
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/dev/tree-sitter/target/release
 
