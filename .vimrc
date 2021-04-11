@@ -47,10 +47,11 @@ endfunction
 
 autocmd FileType make call SetMakefilePrefs() 
 
-colorscheme molokai
+colorscheme jellybeans
 
 call plug#begin()
 
+Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neovimhaskell/haskell-vim'
