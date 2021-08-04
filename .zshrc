@@ -74,11 +74,12 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# I should automate this somehow
+# special token that is recognized by script
+# @@@PATH
+export PATH=/home/eddie/bin:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH=~/node_install/node-v14.17.0-linux-x64/bin:$PATH
 export PATH=~/matlab_install/dest/bin/glnxa64:$PATH
-export PATH=~/bin:$PATH
 
 export XM_ADDR="94:DB:56:E0:CE:EF"
 xm setup > /dev/null &
@@ -106,6 +107,7 @@ xm setup > /dev/null &
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+# @@@ALIAS 
 alias zshconfig="vim ~/.zshrc"
 alias vimconfig="vim ~/.vimrc"
 alias tmuxconfig="vim ~/.tmux.conf"
