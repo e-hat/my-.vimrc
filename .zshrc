@@ -107,7 +107,7 @@ xm setup > /dev/null &
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# @@@ALIAS 
+# @@@ALIAS
 alias zshconfig="vim ~/.zshrc"
 alias vimconfig="vim ~/.vimrc"
 alias tmuxconfig="vim ~/.tmux.conf"
