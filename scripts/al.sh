@@ -5,16 +5,17 @@
 sentinel="# @@@ALIAS"
 cfg_path="$HOME/.zshrc"
 
-if [ ! "$#" -eq 2 ] ; then 
-  echo "This script must be passed two arguments"
-  echo "The first is the name of the alias to create, the second is the value of the new alias"
-  return 1 2> /dev/null
-fi
+# error handling
+die () {
+  echo >&2 "$@"
+  exit 1
+}
 
-if [ -z "$(grep "$sentinel" "$cfg_path")" ] ; then 
-  echo "$cfg_path: file missing sentinel: $sentinel"
-  return 1 2> /dev/null
-fi
+[ "$#" -eq 2 ] || die "Two arguments are required: the name of the \
+alias followed by the value of the alias"
+[ ! -z "$( grep "$sentinel" "$cfg_path")" ] || die "$cfg_path: file is \
+missing sentinel: $sentinel"
+alias followed by the value of the alias"
 
 sed -i "s*$sentinel*$sentinel\nalias $1=\'$2\'*" "$cfg_path"
 source ~/.zshrc

@@ -5,6 +5,17 @@
 sentinel="# @@@PATH"
 cfg_path="$HOME/.zshrc"
 
+# error handling
+die () {
+  echo >&2 "$@"
+  exit 1
+}
+[ "$#" -eq 1 ] || die "This script requires a single argument"
+[ -d "$1" ] || die "This script requires a valid directory"
+[ ! -z "$( grep "$sentinel" "$cfg_path")" ] || die "$cfg_path: config file is \
+missing sentinel: $sentinel"
+
+
 if [ ! "$#" -eq 1 ] ; then 
   echo "This script needs to be passed a single file path"
   return 1 2> /dev/null
